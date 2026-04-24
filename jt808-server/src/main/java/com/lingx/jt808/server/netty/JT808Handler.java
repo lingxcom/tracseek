@@ -52,7 +52,6 @@ public class JT808Handler extends SimpleChannelInboundHandler<byte[]> {
 
 	@Value("#{configs['tracseek.server.check.enabled']}")
 	private String isCheckXym="true";
-	public static boolean isHexstring=false;
 	@PostConstruct
 	public void init() {
 		nores8001.add(0x0001);
@@ -66,7 +65,7 @@ public class JT808Handler extends SimpleChannelInboundHandler<byte[]> {
 	protected void channelRead0(ChannelHandlerContext ctx, byte[] msg) throws Exception {
 		
 		if(msg.length<10)return;
-		if(isHexstring) {
+		if(JT808Utils.isHexstring) {
 			this.redisService.publish(Constants.TOPIC_HEXSTRING_DATA, Utils.bytesToHex(msg));
 		}
 		ByteBuf content = null;

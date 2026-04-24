@@ -64,13 +64,11 @@ public class JT808Server implements ILingxThread, Runnable {
             ChannelFuture future = b.bind(port).sync();
             this.channel = future.channel();
 
-            log.info("✅ JT808服务启动成功，端口: {}", port);
-
             // 阻塞直到关闭
             channel.closeFuture().sync();
 
         } catch (Exception e) {
-            log.error("❌ JT808服务启动失败", e);
+            log.error("JT808服务启动失败", e);
         } finally {
             shutdownEventLoop();
         }

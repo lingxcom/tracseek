@@ -62,6 +62,13 @@ http://localhost:8800
 Account:admin
 Password:123456
 ```
+### 4. Device IP & Port
+
+```bash
+localhost:8808
+```
+
+
 ---
 
 ### 🎉 What you'll see
@@ -191,6 +198,16 @@ If this project helps you:
 
 283853318@qq.com
 
+## 📬 Demo 2
+
+```
+http://gps.lingx.com/
+admin,123456
+
+Device IP & Port
+IP：47.100.112.218
+Port：8808
+```
 
 ## Backend repository
 * Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)

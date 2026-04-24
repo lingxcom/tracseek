@@ -1,5 +1,6 @@
 package com.lingx.jt808.server.thread;
 
+import com.lingx.jt808.core.utils.JT808Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,9 +23,9 @@ public class SystemCommandSubscribe extends JedisPubSub {
 			System.exit(-1);
 		}if("3002".equals(message)) {
 		}else if("3003".equals(message)) {
-			JT808Handler.isHexstring=true;
+			JT808Utils.isHexstring=true;
 		}else if("3004".equals(message)) {
-			JT808Handler.isHexstring=false;
+			JT808Utils.isHexstring=false;
 		}else if("3005".equals(message)) {
 			jt808Handler.reloadWhitelist();
 		}else if("3006".equals(message)) {

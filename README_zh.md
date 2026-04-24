@@ -43,6 +43,9 @@ docker compose up -d
 http://localhost:8800
 账号：admin
 密码：123456
+
+设备接入IP端口
+localhost:8808
 ```
 
 ---

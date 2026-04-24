@@ -9,6 +9,9 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
 public class JT808Utils {
+
+	public static boolean isHexstring=false;
+
 	public static void main(String args[]) {
 		ByteBuf buff=decode(Utils.hexToBytes("7E00020000013800138999007D02467E"));
 		byte array[]=new byte[buff.readableBytes()];
