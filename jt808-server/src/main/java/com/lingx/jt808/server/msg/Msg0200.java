@@ -67,7 +67,6 @@ public class Msg0200 extends AbstrctMsgHandler implements IJT808MsgHandler{
 		speed=speed/10f;
 		if(speed<1)speed=0;
 		if(speed>200)return;//时速大于200，设备上报有问题，忽略该条报文
-		//System.out.println("0B"+Long.toBinaryString(zt));
 		if((zt&0b0100)>0){
 			lat=-lat;
 		}
